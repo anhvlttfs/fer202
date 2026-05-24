@@ -33,6 +33,10 @@
     "@testing-library/user-event": "^14.6",
     "react": "^19",
     "react-dom": "^19",
-    "web-vitals": "^5"
+    "react-is": "^19",
+    "react-router-dom": "^7.15",
+    "sass": "^1",
+    "web-vitals": "^5",
+    "webpack": "^5"
   }
 }
