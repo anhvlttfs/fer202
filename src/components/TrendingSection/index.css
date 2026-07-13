@@ -1,0 +1,76 @@
+/* Outer background wrapper */
+.trending-wrapper {
+    background-color: #f4efea;
+    padding: 40px 20px;
+}
+
+.trending-container {
+    max-width: 1200px;
+}
+
+/* Header Text Styles */
+.trending-tag {
+    color: #ff5833;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.trending-heading {
+    color: #1a202c;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+/* Rectangular 'See all' Button */
+.btn-see-all {
+    background-color: transparent !important;
+    border: 1px solid #111827 !important;
+    color: #ff5833 !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 0px !important;
+    /* Forces strict rectangular shape */
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-see-all:hover {
+    background-color: #111827 !important;
+    color: #ffffff !important;
+}
+
+/* Book Card Container */
+.book-card {
+    background-color: #ffffff !important;
+    border-radius: 24px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.015);
+}
+
+/* Soft Muted Coral Image Placeholder */
+.book-cover-placeholder {
+    background-color: #f5beae;
+    height: 180px;
+    border-radius: 16px;
+    width: 100%;
+}
+
+/* Card Typography */
+.book-title {
+    color: #1a202c;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.book-author {
+    color: #ff5833;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.book-description {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}

@@ -1,0 +1,92 @@
+/* Outer background wrapper matching the signature tan background */
+.footer-wrapper {
+    background-color: #f4efea;
+    padding: 20px;
+}
+
+/* Card layout matching the Hero and Trending design languages */
+.footer-container {
+    background-color: #ffffff;
+    border-radius: 36px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
+    border: 1px solid #f0f0f0;
+}
+
+/* Replicated Brand Identity */
+.footer-logo {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #ff7854, #fd5e49);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.footer-brand-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.2;
+}
+
+.footer-brand-subtitle {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Header Text Styles for Columns */
+.footer-heading {
+    color: #1a202c;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+/* Interactive Navigation Links */
+.footer-links .nav-link {
+    color: #64748b !important;
+    font-size: 0.9rem;
+    padding: 6px 0 !important;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-links .nav-link:hover {
+    color: #ff5833 !important;
+    /* Transitions to the brand coral orange */
+}
+
+/* External Links (Socials & Legal) */
+.social-link,
+.footer-legal-links a {
+    color: #64748b;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.social-link:hover,
+.footer-legal-links a:hover {
+    color: #ff5833;
+}
+
+/* Separator Line and Copyright notes */
+.footer-divider {
+    border-top: 1px solid #f1f5f9;
+    opacity: 1;
+}
+
+.copyright-text {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 500;
+}

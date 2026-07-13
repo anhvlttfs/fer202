@@ -1,0 +1,79 @@
+/* Outer container to simulate the warm background */
+.topbar-wrapper {
+    background-color: #f4efea;
+    padding: 20px;
+}
+
+/* Floating capsule navbar */
+.custom-topbar {
+    background-color: #ffffff;
+    border-radius: 50px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    border: 1px solid #f0f0f0;
+}
+
+/* Coral gradient logo box */
+.brand-logo {
+    width: 46px;
+    height: 46px;
+    background: linear-gradient(135deg, #ff7854, #fd5e49);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+/* Text formatting next to the logo */
+.brand-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.2;
+}
+
+.brand-subtitle {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+/* Outlined rectangular nav items */
+.nav-links-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-btn {
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 4px 16px !important;
+    color: #374151 !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background-color: #f9fafb;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-btn:hover {
+    background-color: #f3f4f6;
+    border-color: #9ca3af;
+    color: #111827 !important;
+}
+
+/* Dark navy Sign In button */
+.sign-in-btn {
+    background-color: #111827 !important;
+    border-color: #111827 !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+}
+
+.sign-in-btn:hover {
+    background-color: #1f2937 !important;
+    border-color: #1f2937 !important;
+}
