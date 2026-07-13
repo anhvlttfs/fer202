@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
     
     return (
         <LayoutProver.Provider value={user}>
-            
+            {children}
         </LayoutProver.Provider>
     );
 }
