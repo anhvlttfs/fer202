@@ -1,25 +1,23 @@
-import { TopBar, HeroSection, TrendingSection, Footer } from "./components/index"
+import { Routes, Route } from "react-router-dom";
+import { TopBar, Footer } from "./components/index"
+import { Home } from "./pages";
 
-function App() {
-  return (
-    <>
-      <header>
-        <TopBar />
-      </header>
-      <main>
-        <section>
-          <HeroSection />
-        </section>
-
-        <section>
-          <TrendingSection />
-        </section>
-      </main>
-      <footer>
-        <Footer />
-      </footer>
-    </>
-  );
+const App = () => {
+    return (
+        <>
+            <header>
+                <TopBar />
+            </header>
+            <main>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                </Routes>
+            </main>
+            <footer>
+                <Footer />
+            </footer>
+        </>
+    );
 }
 
 export default App;
