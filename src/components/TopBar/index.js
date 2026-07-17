@@ -2,6 +2,7 @@
 import { Navbar, Nav, Button, Container } from 'react-bootstrap';
 
 import './index.css';
+import { Link } from 'react-router-dom';
 
 export const TopBar = () => {
     return (
@@ -29,7 +30,7 @@ export const TopBar = () => {
 
                     {/* Action Button */}
                     <div className="action-container">
-                        <Button className="sign-in-btn rounded-pill px-4 py-2">
+                        <Button as={Link} to={"/login"} className="sign-in-btn rounded-pill px-4 py-2">
                             Sign in
                         </Button>
                     </div>
