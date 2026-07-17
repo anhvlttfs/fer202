@@ -1,0 +1,80 @@
+.book-card {
+    background-color: #ffffff !important;
+    border-radius: 24px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.015);
+    overflow: hidden;
+}
+
+.book-cover-shell {
+    position: relative;
+    padding: 1.25rem 1.25rem 0;
+}
+
+.book-cover-placeholder {
+    background: linear-gradient(135deg, #f5beae, #f3d7cc);
+    height: 180px;
+    border-radius: 16px;
+    width: 100%;
+}
+
+.book-favorite-btn {
+    position: absolute;
+    top: 1.75rem;
+    right: 1.75rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #64748b;
+    font-size: 1.2rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(17, 24, 39, 0.08);
+    transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.book-favorite-btn:hover {
+    transform: translateY(-1px);
+}
+
+.book-favorite-btn.is-favorite {
+    color: #ff5833;
+    background: #fff1ed;
+}
+
+.book-title {
+    color: #1a202c;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.book-author {
+    color: #ff5833;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.book-description {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.book-genre-badge,
+.book-year-badge {
+    border-radius: 999px !important;
+    padding: 0.45rem 0.7rem;
+    font-weight: 600 !important;
+}
+
+.book-genre-badge {
+    background-color: #111827 !important;
+}
+
+.book-year-badge {
+    background-color: #f5efe8 !important;
+    color: #4b5563 !important;
+}

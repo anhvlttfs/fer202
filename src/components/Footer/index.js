@@ -4,7 +4,7 @@ import './index.css';
 export const Footer = () => {
     return (
         <div className="footer-wrapper">
-            <Container className="footer-container p-5">
+            <Container fluid className="footer-container p-5">
                 <Row className="gy-4">
 
                     {/* Brand & Tagline Column */}

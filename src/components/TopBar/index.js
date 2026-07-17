@@ -10,7 +10,7 @@ export const TopBar = () => {
                 <Container fluid className="d-flex align-items-center justify-content-between">
 
                     {/* Brand / Logo Section */}
-                    <Navbar.Brand href="#home" className="d-flex align-items-center m-0">
+                    <Navbar.Brand href="/" className="d-flex align-items-center m-0">
                         <div className="brand-logo me-3">
                             <span>B</span>
                         </div>
@@ -22,9 +22,7 @@ export const TopBar = () => {
 
                     {/* Navigation Links */}
                     <Nav className="nav-links-container mx-auto">
-                        <Nav.Link href="#discover" className="nav-btn me-2">Discover</Nav.Link>
-                        <Nav.Link href="#library" className="nav-btn me-2">Library</Nav.Link>
-                        <Nav.Link href="#authors" className="nav-btn">Authors</Nav.Link>
+                        <Nav.Link href="/book" className="nav-btn me-2">Library</Nav.Link>
                     </Nav>
 
                     {/* Action Button */}

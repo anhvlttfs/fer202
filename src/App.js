@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { TopBar, Footer } from "./components/index"
 import { Home } from "./pages";
+import { Book } from "./pages/Book";
 
 const App = () => {
     return (
@@ -11,6 +12,8 @@ const App = () => {
             <main>
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/book" element={<Book />} />
+                    <Route path="/book/:id" element={<Book />} />
                 </Routes>
             </main>
             <footer>
