@@ -1,0 +1,196 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Midnight Library",
+      "author": "Matt Haig",
+      "genre": "Fiction",
+      "year": 2020,
+      "description": "A reflective story about the lives we could have lived."
+    },
+    {
+      "id": 2,
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "genre": "Self-Help",
+      "year": 2018,
+      "description": "Tiny changes that compound into remarkable results."
+    },
+    {
+      "id": 3,
+      "title": "Sapiens",
+      "author": "Yuval Noah Harari",
+      "genre": "History",
+      "year": 2011,
+      "description": "A sweeping look at how Homo sapiens came to dominate the planet."
+    },
+    {
+      "id": 4,
+      "title": "Project Hail Mary",
+      "author": "Andy Weir",
+      "genre": "Science Fiction",
+      "year": 2021,
+      "description": "A lone astronaut wakes up with a mission to save humanity."
+    },
+    {
+      "id": 5,
+      "title": "Educated",
+      "author": "Tara Westover",
+      "genre": "Memoir",
+      "year": 2018,
+      "description": "A memoir about learning, identity, and breaking away from the past."
+    },
+    {
+      "id": 6,
+      "title": "The Psychology of Money",
+      "author": "Morgan Housel",
+      "genre": "Finance",
+      "year": 2020,
+      "description": "Timeless lessons on wealth, greed, and behavior."
+    },
+    {
+      "id": 7,
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "genre": "Science Fiction",
+      "year": 1965,
+      "description": "An epic tale of politics, religion, and survival on a desert planet."
+    },
+    {
+      "id": 8,
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "genre": "Classic",
+      "year": 1813,
+      "description": "A sharp and witty romance about class, manners, and misunderstanding."
+    },
+    {
+      "id": 9,
+      "title": "The Lean Startup",
+      "author": "Eric Ries",
+      "genre": "Business",
+      "year": 2011,
+      "description": "A methodology for building products people actually want."
+    },
+    {
+      "id": 10,
+      "title": "Deep Work",
+      "author": "Cal Newport",
+      "genre": "Productivity",
+      "year": 2016,
+      "description": "Rules for focused success in a distracted world."
+    },
+    {
+      "id": 11,
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "genre": "Fiction",
+      "year": 1988,
+      "description": "A parable about following your dream and reading the signs."
+    },
+    {
+      "id": 12,
+      "title": "Thinking, Fast and Slow",
+      "author": "Daniel Kahneman",
+      "genre": "Psychology",
+      "year": 2011,
+      "description": "A foundational look at the two systems that drive human thought."
+    },
+    {
+      "id": 13,
+      "title": "The Name of the Wind",
+      "author": "Patrick Rothfuss",
+      "genre": "Fantasy",
+      "year": 2007,
+      "description": "The first chapter in the legend of Kvothe."
+    },
+    {
+      "id": 14,
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "genre": "Programming",
+      "year": 2008,
+      "description": "A practical guide to writing readable, maintainable code."
+    },
+    {
+      "id": 15,
+      "title": "The Song of Achilles",
+      "author": "Madeline Miller",
+      "genre": "Historical Fiction",
+      "year": 2011,
+      "description": "A lyrical retelling of Achilles and Patroclus."
+    },
+    {
+      "id": 16,
+      "title": "Born a Crime",
+      "author": "Trevor Noah",
+      "genre": "Memoir",
+      "year": 2016,
+      "description": "Stories from growing up in apartheid-era South Africa."
+    },
+    {
+      "id": 17,
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "year": 1937,
+      "description": "Bilbo Baggins is swept into an unexpected adventure."
+    },
+    {
+      "id": 18,
+      "title": "The Road",
+      "author": "Cormac McCarthy",
+      "genre": "Post-Apocalyptic",
+      "year": 2006,
+      "description": "A father and son cross a devastated landscape together."
+    },
+    {
+      "id": 19,
+      "title": "A Short History of Nearly Everything",
+      "author": "Bill Bryson",
+      "genre": "Science",
+      "year": 2003,
+      "description": "An accessible tour through the history of the universe and life."
+    },
+    {
+      "id": 20,
+      "title": "Where the Crawdads Sing",
+      "author": "Delia Owens",
+      "genre": "Mystery",
+      "year": 2018,
+      "description": "A blend of coming-of-age, romance, and a murder mystery."
+    },
+    {
+      "id": 21,
+      "title": "The Four Winds",
+      "author": "Kristin Hannah",
+      "genre": "Historical Fiction",
+      "year": 2021,
+      "description": "A sweeping novel about endurance, family, and survival during the Dust Bowl."
+    },
+    {
+      "id": 22,
+      "title": "The Invisible Life of Addie LaRue",
+      "author": "V.E. Schwab",
+      "genre": "Fantasy",
+      "year": 2020,
+      "description": "A woman makes a deal to live forever, but at the cost of being forgotten."
+    },
+    {
+      "id": 23,
+      "title": "Becoming",
+      "author": "Michelle Obama",
+      "genre": "Memoir",
+      "year": 2018,
+      "description": "An intimate, powerful memoir about growing up and finding a voice."
+    },
+    {
+      "id": 24,
+      "title": "The Body Keeps the Score",
+      "author": "Bessel van der Kolk",
+      "genre": "Psychology",
+      "year": 2014,
+      "description": "A landmark book on trauma, healing, and the mind-body connection."
+    }
+  ]
+}
