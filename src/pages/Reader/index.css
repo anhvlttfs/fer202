@@ -36,6 +36,7 @@
     align-items: flex-start;
 }
 .reader-page {
+    background-color: #f4efea;
     width: 900px;
     margin: 40px auto;
 }
