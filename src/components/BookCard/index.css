@@ -78,3 +78,24 @@
     background-color: #f5efe8 !important;
     color: #4b5563 !important;
 }
+
+.book-card-actions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.book-read-btn {
+    background-color: #111827 !important;
+    border-color: #111827 !important;
+    color: #ffffff !important;
+    border-radius: 999px !important;
+    padding: 0.6rem 1rem !important;
+    font-weight: 600 !important;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.book-read-btn:hover {
+    background-color: #1f2937 !important;
+    border-color: #1f2937 !important;
+    transform: translateY(-1px);
+}

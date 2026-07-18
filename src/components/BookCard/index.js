@@ -1,4 +1,5 @@
-import { Badge, Card } from "react-bootstrap";
+import { Badge, Button, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./index.css";
 
 export const BookCard = ({ book, isFavorite, onToggleFavorite }) => {
@@ -40,6 +41,12 @@ export const BookCard = ({ book, isFavorite, onToggleFavorite }) => {
                 <Card.Text className="book-description mb-0">
                     {book.description || "No description available for this book yet."}
                 </Card.Text>
+
+                <div className="book-card-actions mt-3">
+                    <Button as={Link} to={`/book/${book.id}`} className="book-read-btn">
+                        Read book
+                    </Button>
+                </div>
             </Card.Body>
         </Card>
     );
