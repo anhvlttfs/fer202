@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { TopBar, Footer } from "./components/index"
 import { Home, Login, Book, Reader } from "./pages";
-import { Book } from "./pages/Book";
 
 const App = () => {
     return (
