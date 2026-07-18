@@ -1,23 +1,26 @@
 import { Routes, Route } from "react-router-dom";
-import { TopBar, Footer } from "./components/index"
+import { TopBar, Footer } from "./components/index";
 import { Home } from "./pages";
-
+import { Book } from "./pages/Book";
+import { Reader } from "./pages/Reader";
 const App = () => {
-    return (
-        <>
-            <header>
-                <TopBar />
-            </header>
-            <main>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                </Routes>
-            </main>
-            <footer>
-                <Footer />
-            </footer>
-        </>
-    );
-}
+  return (
+    <>
+      <header>
+        <TopBar />
+      </header>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/book" element={<Book />} />
+          <Route path="/book/:id" element={<Reader />} />
+        </Routes>
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </>
+  );
+};
 
 export default App;
