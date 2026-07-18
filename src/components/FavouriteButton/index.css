@@ -1,0 +1,13 @@
+.favourite-btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: crimson;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.Favourite-btn:hover {
+  opacity: 0.9;
+}

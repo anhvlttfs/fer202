@@ -1,0 +1,42 @@
+.reader-toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0 30px;
+    flex-wrap: wrap;
+}
+
+.reader-toolbar button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.zoom-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.reader-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.book-info {
+    flex: 1;
+}
+
+.favorite-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.reader-page {
+    background-color: #f4efea;
+    width: 900px;
+    margin: 40px auto;
+}
