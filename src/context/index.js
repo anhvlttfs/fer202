@@ -1,12 +1,12 @@
 import { createContext, useState } from "react";
 
 const contextData = createContext({
-    user: ""
+    user: {}
 });
 
 const Context = ({ children }) => {
-    const [user, setUser] = useState(null);
-    
+    const [user, setUser] = useState({});
+
     return (
         <contextData.Provider value={user}>
             {children}
