@@ -8,7 +8,7 @@ export const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Login attempt', { email, password });
+        console.log('Login attempt submitted');
     };
 
     return (
