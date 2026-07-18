@@ -1,0 +1,50 @@
+
+/* Page wrapper to match site warm background */
+.login-wrapper {
+	background-color: #f4efea;
+	padding: 40px 20px;
+}
+
+.login-card {
+	background-color: #fffaf3;
+	border-radius: 24px;
+	padding: 32px;
+	box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+	border: 1px solid #f5ebe0;
+}
+
+.login-title {
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: #1a202c;
+}
+
+.login-subtitle {
+	color: #64748b;
+	margin-top: -6px;
+}
+
+.form-label {
+	font-weight: 600;
+	color: #374151;
+}
+
+.form-input {
+	border-radius: 10px;
+	border: 1px solid #e6e6e6;
+	padding: 12px 14px;
+	background-color: #ffffff;
+}
+
+.btn-login {
+	background-color: #111827 !important;
+	border-color: #111827 !important;
+	color: #ffffff !important;
+	font-weight: 600;
+}
+
+@media (max-width: 768px) {
+	.login-card {
+		padding: 24px;
+	}
+}
