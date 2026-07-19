@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7",
-    "@babel/plugin-syntax-flow": "^7",
+    "@babel/plugin-syntax-flow": "^8",
     "@babel/plugin-transform-react-jsx": "^7",
     "react-scripts": "^5",
     "typescript": "^7"
