@@ -1,12 +1,28 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { Col, Container, Row } from "react-bootstrap";
 import "./index.css";
 
 export const BookHeroSection = ({ bookCount, favoriteCount, genreCount, featuredBook }) => {
+    const user = useSelector((state) => state.auth.user);
+    const navigate = useNavigate();
     const featuredTitle = featuredBook?.title || "Featured book";
     const featuredAuthor = featuredBook?.author || "Pick a favorite from the collection";
     const featuredGenre = featuredBook?.genre || "Featured pick";
     const featuredDescription = featuredBook?.description || "A highlighted title from the library, ready to catch the reader's eye.";
+    const featuredImageSrc = featuredBook?.image ? `/${featuredBook.image}` : "/images/placeholder-book.jpg";
+
+    const handleFeaturedBookClick = () => {
+        if (!user) {
+            window.alert("Please sign in to read books.");
+            navigate("/login");
+            return;
+        }
+
+        if (featuredBook?.id) {
+            navigate(`/book/${featuredBook.id}`);
+        }
+    };
 
     return (
         <div className="book-hero-wrapper">
@@ -36,12 +52,24 @@ export const BookHeroSection = ({ bookCount, favoriteCount, genreCount, featured
                     </Col>
 
                     <Col lg={5} md={12}>
-                        <div className="book-featured-card p-4 p-md-5">
+                        <div
+                            className="book-featured-card p-4 p-md-5"
+                            style={{
+                                "--featured-image": `url(${featuredImageSrc})`
+                            }}
+                        >
+                            <div className="book-featured-cover mb-4">
+                                <img
+                                    src={featuredImageSrc}
+                                    alt={featuredBook?.title ? `${featuredBook.title} cover` : "Featured book cover"}
+                                    className="book-featured-image"
+                                />
+                            </div>
                             <span className="book-featured-tag d-block mb-3">Featured book</span>
                             <h2 className="book-featured-title mb-3">
-                                <Link to={`/book/${featuredBook?.id || ""}`} className="book-featured-title-link">
+                                <button type="button" className="book-featured-title-link" onClick={handleFeaturedBookClick}>
                                     {featuredTitle}
-                                </Link>
+                                </button>
                             </h2>
                             <p className="book-featured-author mb-3">{featuredAuthor}</p>
                             <div className="book-featured-meta mb-3">{featuredGenre}</div>

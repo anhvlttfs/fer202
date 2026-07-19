@@ -1,6 +1,7 @@
 import "./index.css";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 import BookReader from "../../components/BookReader";
 import FavouriteButton from "../../components/FavouriteButton";
@@ -8,13 +9,25 @@ import CommentSection from "../../components/CommentSection";
 
 export const Reader = () => {
   const { id } = useParams();
+  const user = useSelector((state) => state.auth.user);
+  const navigate = useNavigate();
   const [book, setBook] = useState(null);
 
   useEffect(() => {
+    if (!user) {
+      window.alert("Please sign in to read books.");
+      navigate("/login");
+      return;
+    }
+
     fetch(`http://localhost:5000/books/${id}`)
       .then((res) => res.json())
       .then((data) => setBook(data));
-  }, [id]);
+  }, [id, user, navigate]);
+
+  if (!user) {
+    return null;
+  }
 
   if (!book) {
     return <h3>Loading...</h3>;

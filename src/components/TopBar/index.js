@@ -33,6 +33,7 @@ export const TopBar = () => {
 
                     {/* Navigation Links */}
                     <Nav className="nav-links-container mx-auto">
+                        <Nav.Link href="/" className="nav-btn me-2">Home</Nav.Link>
                         <Nav.Link href="/book" className="nav-btn me-2">Library</Nav.Link>
                     </Nav>
 

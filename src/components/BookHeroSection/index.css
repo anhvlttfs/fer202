@@ -48,11 +48,50 @@
 }
 
 .book-featured-card {
-    background: linear-gradient(145deg, #38264b, #4a2e65);
+    background: #fffaf3;
     border-radius: 28px;
     min-height: 260px;
-    color: #ffffff;
+    color: #1a202c;
     box-shadow: 0 12px 32px rgba(56, 38, 75, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.book-featured-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: var(--featured-image);
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.12;
+    filter: blur(2px);
+
+    z-index: 0;
+}
+
+.book-featured-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.book-featured-cover {
+    width: 50%;
+    aspect-ratio: 3 / 4;
+    border-radius: 20px;
+    overflow: hidden;
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.08);
+}
+
+.book-featured-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
 }
 
 .book-featured-title {
@@ -63,8 +102,14 @@
 }
 
 .book-featured-title-link {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
     color: inherit;
     text-decoration: none;
+    display: inline;
 }
 
 .book-featured-title-link:hover {

@@ -4,7 +4,7 @@ import { BookPagination } from "../BookPagination";
 import { BookStatePanel } from "../BookStatePanel";
 import "./index.css";
 
-export const BookListSection = ({ loading, error, filteredBooks, paginatedBooks, currentPage, totalPages, favoriteBooks, onToggleFavorite, onPageChange }) => {
+export const BookListSection = ({ loading, error, filteredBooks, paginatedBooks, currentPage, totalPages, favoriteBooks, onToggleFavorite, onReadBook, onPageChange }) => {
     return (
         <div className="book-list-wrapper">
             <div className="book-list-container container">
@@ -30,6 +30,7 @@ export const BookListSection = ({ loading, error, filteredBooks, paginatedBooks,
                                             book={book}
                                             isFavorite={Boolean(favoriteBooks[book.id])}
                                             onToggleFavorite={onToggleFavorite}
+                                            onReadBook={onReadBook}
                                         />
                                     </Col>
                                 ))

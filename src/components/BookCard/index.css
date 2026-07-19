@@ -10,11 +10,22 @@
     padding: 1.25rem 1.25rem 0;
 }
 
-.book-cover-placeholder {
-    background: linear-gradient(135deg, #f5beae, #f3d7cc);
-    height: 180px;
-    border-radius: 16px;
+.book-cover-frame {
     width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #f8f4ef;
+    border: 1px solid #efe6dc;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.book-cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
 }
 
 .book-favorite-btn {
@@ -34,6 +45,7 @@
     justify-content: center;
     box-shadow: 0 8px 16px rgba(17, 24, 39, 0.08);
     transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+    z-index: 1;
 }
 
 .book-favorite-btn:hover {
