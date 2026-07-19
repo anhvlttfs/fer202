@@ -33,7 +33,7 @@ export const Reader = () => {
         </div>
       </div>
 
-      <BookReader book={book} />
+      <BookReader bookId={book.id} />
       <CommentSection bookId={book.id} />
     </div>
   );
