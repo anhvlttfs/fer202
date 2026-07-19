@@ -1,18 +1,15 @@
 .book-reader {
-  width: 100%;
-  margin: 20px 0;
-}
-
-.pdf-placeholder {
-  height: 700px;
-  border: 2px dashed #ccc;
-  border-radius: 10px;
-  background: #f8f9fa;
-
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
 
-  color: #666;
+.react-pdf__Page {
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  margin-bottom: 20px;
+}
+
+.react-pdf__Page canvas {
+  max-width: 100%;
+  height: auto !important;
 }

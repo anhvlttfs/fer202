@@ -1,14 +1,32 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { login } from '../../features/auth/authSlice';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+
 import './index.css';
 
 export const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const auth = useSelector(state => state.auth || {});
 
-    const handleSubmit = (e) => {
+    React.useEffect(() => {
+        if (auth.user) {
+            navigate('/');
+        }
+    }, [auth.user, navigate]);
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Login attempt submitted');
+        try {
+            await dispatch(login({ email, password })).unwrap();
+            navigate('/');
+        } catch (err) {
+            alert("Login failed. Try again");
+        }
     };
 
     return (
@@ -33,9 +51,10 @@ export const Login = () => {
                                     <Form.Control.Feedback type="invalid">Enter a password</Form.Control.Feedback>
                                 </Form.Group>
 
+                                {auth.error && <div className="text-danger mb-2">{auth.error}</div>}
                                 <div className="d-grid">
-                                    <Button type="submit" className="btn-login rounded-pill px-4 py-2">
-                                        Log in
+                                    <Button type="submit" className="btn-login rounded-pill px-4 py-2" disabled={auth.status === 'loading'}>
+                                        {auth.status === 'loading' ? 'Signing in...' : 'Log in'}
                                     </Button>
                                 </div>
                             </Form>
