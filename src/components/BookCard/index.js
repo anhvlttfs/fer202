@@ -1,8 +1,7 @@
 import { Badge, Button, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import "./index.css";
 
-export const BookCard = ({ book, isFavorite, onToggleFavorite }) => {
+export const BookCard = ({ book, isFavorite, onToggleFavorite, onReadBook }) => {
     return (
         <Card className="book-card h-100 border-0">
             <div className="book-cover-shell">
@@ -14,7 +13,13 @@ export const BookCard = ({ book, isFavorite, onToggleFavorite }) => {
                 >
                     {isFavorite ? "♥" : "♡"}
                 </button>
-                <div className="book-cover-placeholder" />
+                <div className="book-cover-frame">
+                    <img
+                        src={book.image ? `/${book.image}` : "/images/placeholder-book.jpg"}
+                        alt={book.title ? `${book.title} cover` : "Book cover"}
+                        className="book-cover-image"
+                    />
+                </div>
             </div>
 
             <Card.Body className="d-flex flex-column">
@@ -43,7 +48,7 @@ export const BookCard = ({ book, isFavorite, onToggleFavorite }) => {
                 </Card.Text>
 
                 <div className="book-card-actions mt-3">
-                    <Button as={Link} to={`/book/${book.id}`} className="book-read-btn">
+                    <Button type="button" onClick={() => onReadBook(book.id)} className="book-read-btn">
                         Read book
                     </Button>
                 </div>
