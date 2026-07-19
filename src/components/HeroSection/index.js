@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import { Link } from 'react-router-dom';
 
 export const HeroSection = () => {
+    const [topBook, setTopBook] = useState({});
+
+    useEffect(() => {
+        fetch("http://localhost:5000/books").then(res => res.json()).then(jsonData => setTopBook(jsonData[0]));
+    }, []);
+
     return (
         <div className="hero-wrapper">
             <Container className="hero-container p-5">
@@ -23,24 +30,9 @@ export const HeroSection = () => {
 
                         {/* Action Buttons */}
                         <div className="hero-buttons mb-5 d-flex gap-3 flex-wrap">
-                            <Button className="btn-explore rounded-pill px-4 py-2">
+                            <Button className="btn-explore rounded-pill px-4 py-2" as={Link} to={"/book"}>
                                 Explore library
                             </Button>
-                            <Button className="btn-view-picks rounded-pill px-4 py-2">
-                                View picks
-                            </Button>
-                        </div>
-
-                        {/* Stats Row */}
-                        <div className="hero-stats d-flex gap-5">
-                            <div className="stat-item">
-                                <span className="stat-number d-block">18k+</span>
-                                <span className="stat-label">Readers</span>
-                            </div>
-                            <div className="stat-item">
-                                <span className="stat-number d-block">4.9/5</span>
-                                <span className="stat-label">Community rating</span>
-                            </div>
                         </div>
                     </Col>
 
@@ -52,11 +44,14 @@ export const HeroSection = () => {
                                     Featured this week
                                 </span>
                                 <h2 className="featured-title mb-2">
-                                    Tomorrow, and Tomorrow, and Tomorrow
+                                    {topBook?.title}
                                 </h2>
                                 <p className="featured-author mb-0">
-                                    Gabrielle Zevin
+                                    {topBook?.author}
                                 </p>
+                                <Button className="btn-view-picks rounded-pill px-4 py-2 mt-3" as={Link} to={`/book/${topBook?.id}`}>
+                                    Read book
+                                </Button>
                             </div>
                         </div>
                     </Col>

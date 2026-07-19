@@ -1,5 +1,6 @@
 import { Container, Row, Col, Nav } from 'react-bootstrap';
 import './index.css';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
     return (
@@ -24,27 +25,16 @@ export const Footer = () => {
                     </Col>
 
                     {/* Navigation Column 1 */}
-                    <Col lg={2} md={4} sm={6} xs={6}>
+                    <Col lg={3} md={6} sm={6} xs={6}>
                         <h5 className="footer-heading mb-3">Explore</h5>
                         <Nav className="flex-column footer-links">
-                            <Nav.Link href="#discover">Discover</Nav.Link>
-                            <Nav.Link href="#library">Library</Nav.Link>
-                            <Nav.Link href="#authors">Authors</Nav.Link>
-                        </Nav>
-                    </Col>
-
-                    {/* Navigation Column 2 */}
-                    <Col lg={2} md={4} sm={6} xs={6}>
-                        <h5 className="footer-heading mb-3">Company</h5>
-                        <Nav className="flex-column footer-links">
-                            <Nav.Link href="#about">About Us</Nav.Link>
-                            <Nav.Link href="#careers">Careers</Nav.Link>
-                            <Nav.Link href="#blog">Journal</Nav.Link>
+                            <Nav.Link as={Link} to={"/book"}>Discover</Nav.Link>
+                            <Nav.Link as={Link} to={"/stat"}>Stat</Nav.Link>
                         </Nav>
                     </Col>
 
                     {/* Connection / Community Column */}
-                    <Col lg={4} md={4} sm={12}>
+                    <Col lg={3} md={6} sm={6} xs={6}>
                         <h5 className="footer-heading mb-3">Community</h5>
                         <p className="footer-text text-muted mb-3">
                             Join our growing network of over 18k+ active readers.

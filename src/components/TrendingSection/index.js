@@ -1,27 +1,15 @@
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Image } from 'react-bootstrap';
 import './index.css';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const TrendingSection = () => {
-    const trendingBooks = [
-        {
-            id: 1,
-            title: 'The Midnight Library',
-            author: 'Matt Haig',
-            description: 'A hopeful and intimate story about every life we could have lived.'
-        },
-        {
-            id: 2,
-            title: 'Sapiens',
-            author: 'Yuval Noah Harari',
-            description: 'A sweeping account of how humans got here and why we thrive.'
-        },
-        {
-            id: 3,
-            title: 'Atomic Habits',
-            author: 'James Clear',
-            description: 'Tiny changes with remarkable results for your daily routine.'
-        }
-    ];
+
+    const [trendingBooks, setTrendingBooks] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:5000/books").then(res => res.json()).then(jsonData => setTrendingBooks(jsonData?.slice(0, 3)));
+    }, [])
 
     return (
         <div className="trending-wrapper">
@@ -34,7 +22,7 @@ export const TrendingSection = () => {
                         <h2 className="trending-heading m-0">Freshly picked for your next chapter</h2>
                     </div>
                     <div>
-                        <Button className="btn-see-all px-3 py-1">
+                        <Button className="book-read-btn px-3 py-1" as={Link} to={"/book"}>
                             See all
                         </Button>
                     </div>
@@ -45,9 +33,6 @@ export const TrendingSection = () => {
                     {trendingBooks.map((book) => (
                         <Col key={book.id} lg={4} md={6} xs={12}>
                             <Card className="book-card h-100 p-4 border-0">
-                                {/* Visual Placeholder for Book Cover */}
-                                <div className="book-cover-placeholder mb-3"></div>
-
                                 <Card.Body className="p-0 d-flex flex-column">
                                     <Card.Title className="book-title mb-1">
                                         {book.title}
@@ -58,6 +43,9 @@ export const TrendingSection = () => {
                                     <Card.Text className="book-description">
                                         {book.description}
                                     </Card.Text>
+                                    <Button as={Link} to={`/book/${book.id}`} className="book-read-btn">
+                                        Read book
+                                    </Button>
                                 </Card.Body>
                             </Card>
                         </Col>
