@@ -192,5 +192,12 @@
       "year": 2014,
       "description": "A landmark book on trauma, healing, and the mind-body connection."
     }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "email": "admin@example.com",
+      "passwordHash": "e10adc3949ba59abbe56e057f20f883e"
+    }
   ]
 }
