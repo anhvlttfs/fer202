@@ -45,7 +45,7 @@
     "webpack": "^5"
   },
   "devDependencies": {
-    "@babel/core": "^7",
+    "@babel/core": "^8",
     "@babel/plugin-syntax-flow": "^7",
     "@babel/plugin-transform-react-jsx": "^7",
     "react-scripts": "^5",
