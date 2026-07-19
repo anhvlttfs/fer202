@@ -121,7 +121,7 @@
       "image": "images/thinking.jpg"
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "The Name of the star",
       "author": "Maureen Johnson",
       "genre": "Fantasy",
@@ -211,7 +211,7 @@
       "image": "images/the-four.jpg"
     },
     {
-      "id": 22,
+      "id": "22",
       "title": "The Girl I Left Behind",
       "author": "Andie Newton",
       "genre": "Fantasy",
@@ -231,7 +231,7 @@
       "image": "images/becoming.jpg"
     },
     {
-      "id": 24,
+      "id": "24",
       "title": "My Body Keeps Your Secrets",
       "author": "Lucia Osborne-Crowley",
       "genre": "Psychology",
@@ -243,14 +243,14 @@
   ],
   "user": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Admin",
       "email": "admin@example.com",
       "passwordHash": "e10adc3949ba59abbe56e057f20f883e",
       "role": "admin"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "user",
       "email": "user@example.com",
       "passwordHash": "e10adc3949ba59abbe56e057f20f883e",
@@ -264,19 +264,20 @@
       "userName": "user",
       "content": "ok",
       "createdAt": "17:38:55 19/7/2026",
-      "id": 1
+      "id": "1"
     }
   ],
   "favourites": [
     {
       "userId": 2,
       "bookId": 1,
-      "id": 1
+      "id": "1"
     },
     {
       "userId": 2,
       "bookId": 3,
-      "id": 2
+      "id": "2"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
