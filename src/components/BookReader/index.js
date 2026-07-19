@@ -1,12 +1,14 @@
 import "./index.css";
 
-function BookReader() {
+function BookReader({ book }) {
   return (
     <div className="book-reader">
-      <div className="pdf-placeholder">
-        <h3>📖 PDF Viewer</h3>
-        <p>PDF will be displayed here.</p>
-      </div>
+      <iframe
+        src={book.pdfUrl}
+        width="100%"
+        height="700px"
+        title={book.title}
+      />
     </div>
   );
 }
