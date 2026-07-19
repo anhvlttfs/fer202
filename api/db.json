@@ -241,5 +241,12 @@
       "pdfUrl":"https://cdn.bookey.app/files/pdf/book/en/my-body-keeps-your-secrets.pdf",
       "image": "images/my-body.jpg"
     }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "email": "admin@example.com",
+      "passwordHash": "e10adc3949ba59abbe56e057f20f883e"
+    }
   ]
 }
