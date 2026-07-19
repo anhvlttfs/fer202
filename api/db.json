@@ -7,7 +7,7 @@
       "genre": "Fiction",
       "year": 2020,
       "description": "A reflective story about the lives we could have lived.",
-      "pdfUrl": "https://dn721808.ca.archive.org/0/items/the-midnight-library-by-matt-haig_202406/The%20Midnight%20Library%20by%20Matt%20Haig.pdf",
+      "pdfUrl": "https://archive.org/download/the-midnight-library-by-matt-haig-pdfdrive/The%20Midnight%20Library%20by%20Matt%20Haig%20%28%20PDFDrive%20%29.pdf",
       "image": "images/The-Midnight-Libary.jpg"
     },
     {
@@ -58,7 +58,7 @@
       "year": 2020,
       "description": "Timeless lessons on wealth, greed, and behavior.",
       "pdfUrl": "https://cdn.bookey.app/files/pdf/book/en/the-psychology-of-money.pdf",
-      "image": "images/the-psy.jpg"
+      "image": "images/the_psy.jpg"
     },
     {
       "id": 7,
@@ -158,7 +158,7 @@
       "year": 2016,
       "description": "Stories from growing up in apartheid-era South Africa.",
       "pdfUrl": "https://cdn.bookey.app/files/pdf/book/en/born-a-crime.pdf",
-      "image": "images/born-the-crime.jpg"
+      "image": "images/born-a-crime.jpg"
     },
     {
       "id": 17,
@@ -272,6 +272,11 @@
       "userId": 2,
       "bookId": 1,
       "id": 1
+    },
+    {
+      "userId": 2,
+      "bookId": 3,
+      "id": 2
     }
   ]
 }

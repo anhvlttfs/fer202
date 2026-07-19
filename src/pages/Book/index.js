@@ -1,9 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { BookFilters, BookHeroSection, BookListSection } from "../../components";
 import "./index.css";
 
 export const Book = () => {
     const booksPerPage = 12;
+    const navigate = useNavigate();
+    const user = useSelector((state) => state.auth.user);
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
@@ -35,6 +39,31 @@ export const Book = () => {
 
         loadBooks();
     }, []);
+
+    useEffect(() => {
+        const loadFavorites = async () => {
+            if (!user) {
+                setFavoriteBooks({});
+                return;
+            }
+
+            try {
+                const response = await fetch(`http://localhost:5000/favourites?userId=${user.id}`);
+                const favourites = response.ok ? await response.json() : [];
+                const nextFavorites = {};
+
+                (Array.isArray(favourites) ? favourites : []).forEach((item) => {
+                    nextFavorites[item.bookId] = true;
+                });
+
+                setFavoriteBooks(nextFavorites);
+            } catch (err) {
+                setFavoriteBooks({});
+            }
+        };
+
+        loadFavorites();
+    }, [user]);
 
     const genres = useMemo(() => {
         const uniqueGenres = books
@@ -73,11 +102,55 @@ export const Book = () => {
         }
     }, [currentPage, totalPages]);
 
-    const toggleFavorite = (bookId) => {
+    const toggleFavorite = async (bookId) => {
+        if (!user) {
+            window.alert("Please sign in to save favorite books.");
+            navigate("/login");
+            return;
+        }
+
+        const existingResponse = await fetch(`http://localhost:5000/favourites?userId=${user.id}&bookId=${bookId}`);
+        const existing = existingResponse.ok ? await existingResponse.json() : [];
+
+        if (Array.isArray(existing) && existing.length > 0) {
+            await Promise.all(
+                existing.map((item) =>
+                    fetch(`http://localhost:5000/favourites/${item.id}`, { method: "DELETE" }),
+                ),
+            );
+
+            setFavoriteBooks((previousFavorites) => ({
+                ...previousFavorites,
+                [bookId]: false,
+            }));
+            return;
+        }
+
+        await fetch("http://localhost:5000/favourites", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                userId: user.id,
+                bookId,
+            }),
+        });
+
         setFavoriteBooks((previousFavorites) => ({
             ...previousFavorites,
-            [bookId]: !previousFavorites[bookId],
+            [bookId]: true,
         }));
+    };
+
+    const handleReadBook = (bookId) => {
+        if (!user) {
+            window.alert("Please sign in to read books.");
+            navigate("/login");
+            return;
+        }
+
+        navigate(`/book/${bookId}`);
     };
 
     const favoriteCount = Object.values(favoriteBooks).filter(Boolean).length;
@@ -109,6 +182,7 @@ export const Book = () => {
                     totalPages={totalPages}
                     favoriteBooks={favoriteBooks}
                     onToggleFavorite={toggleFavorite}
+                    onReadBook={handleReadBook}
                     onPageChange={setCurrentPage}
                 />
             </section>
