@@ -11,11 +11,21 @@ function BookReader({ bookId }) {
   }, [bookId]);
 
   if (!book) {
-    return <p>Loading PDF...</p>;
+    return <div className="book-reader-loading">Loading PDF...</div>;
   }
 
   return (
-    <iframe src={book.pdfUrl} width="100%" height="700px" title={book.title} />
+    <div className="book-reader">
+      <div className="book-reader-shell">
+        <iframe
+          className="book-reader-iframe"
+          src={book.pdfUrl}
+          title={book.title}
+          loading="lazy"
+        />
+      </div>
+    </div>
   );
 }
+
 export default BookReader;
