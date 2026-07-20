@@ -8,6 +8,8 @@ export default function BookForm({ onSubmit, editingBook, onCancel }) {
     genre: "",
     year: "",
     description: "",
+    pdfUrl: "",
+    image: "",
   });
 
   useEffect(() => {
@@ -20,6 +22,8 @@ export default function BookForm({ onSubmit, editingBook, onCancel }) {
         genre: "",
         year: "",
         description: "",
+        pdfUrl: "",
+        image: "",
       });
     }
   }, [editingBook]);
@@ -33,7 +37,11 @@ export default function BookForm({ onSubmit, editingBook, onCancel }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(form);
+
+    onSubmit({
+      ...form,
+      year: Number(form.year),
+    });
   };
 
   return (
@@ -76,6 +84,19 @@ export default function BookForm({ onSubmit, editingBook, onCancel }) {
             name="description"
             placeholder="Description"
             value={form.description}
+            onChange={handleChange}
+          />
+          <input
+            name="pdfUrl"
+            placeholder="PDF URL"
+            value={form.pdfUrl}
+            onChange={handleChange}
+          />
+
+          <input
+            name="image"
+            placeholder="Image URL (vd: images/book.jpg)"
+            value={form.image}
             onChange={handleChange}
           />
 

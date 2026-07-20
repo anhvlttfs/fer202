@@ -8,7 +8,7 @@ export default function Admin() {
   const [editingBook, setEditingBook] = useState(null);
 
   const loadBooks = () => {
-    fetch("http://localhost:3000/books")
+    fetch("http://localhost:5000/books")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -29,11 +29,11 @@ export default function Admin() {
     const maxId = Math.max(...numericIds, 0);
 
     const newBook = {
-      id: String(maxId + 1),
+      id: maxId + 1,
       ...data,
     };
 
-    fetch("http://localhost:3000/books", {
+    fetch("http://localhost:5000/books", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -46,7 +46,7 @@ export default function Admin() {
   };
   // ✅ EDIT
   const handleEdit = (data) => {
-    fetch(`http://localhost:3000/books/${editingBook.id}`, {
+    fetch(`http://localhost:5000/books/${editingBook.id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -62,7 +62,7 @@ export default function Admin() {
 
   // DELETE
   const deleteBook = (id) => {
-    fetch(`http://localhost:3000/books/${id}`, {
+    fetch(`http://localhost:5000/books/${id}`, {
       method: "DELETE",
     }).then(loadBooks);
   };
@@ -108,7 +108,19 @@ export default function Admin() {
               <td>{b.year}</td>
               <td>
                 <button onClick={() => editBook(b)}>Edit</button>
-                <button onClick={() => deleteBook(b.id)}>Delete</button>
+                <button
+                  onClick={() => {
+                    if (
+                      window.confirm(
+                        "Are you sure you want to delete this book?",
+                      )
+                    ) {
+                      deleteBook(b.id);
+                    }
+                  }}
+                >
+                  Delete
+                </button>
               </td>
             </tr>
           ))}
