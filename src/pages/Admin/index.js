@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./index.css";
 import BookForm from "../../components/BookForm";
 
-export default function Admin() {
+export function Admin() {
   const [books, setBooks] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [editingBook, setEditingBook] = useState(null);
