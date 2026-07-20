@@ -1,0 +1,201 @@
+.stat-wrapper {
+    background-color: #f4efea;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.stat-container {
+    background-color: #fffaf3;
+    border-radius: 36px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
+    border: 1px solid #f5ebe0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.stat-tag {
+    color: #ff5833;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.stat-title {
+    color: #1a202c;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.stat-description {
+    color: #64748b;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 640px;
+}
+
+/* Overview mini cards */
+.stat-mini-card {
+    background: #ffffff;
+    border: 1px solid #f5ebe0;
+    border-radius: 20px;
+    padding: 22px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-mini-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.stat-number {
+    color: #1a202c;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.stat-label {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Genre chart card */
+.stat-chart-card {
+    background: #ffffff;
+    border: 1px solid #f5ebe0;
+    border-radius: 28px;
+}
+
+.stat-tag-muted {
+    color: #b08968;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.stat-chart-title {
+    color: #1a202c;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* Top-books cards (reuse the featured-card gradient language) */
+.stat-top-card {
+    background: linear-gradient(145deg, #38264b, #4a2e65);
+    border-radius: 28px;
+    color: #ffffff;
+    box-shadow: 0 12px 32px rgba(56, 38, 75, 0.15);
+    height: 100%;
+}
+
+.stat-top-card .featured-tag {
+    color: #a78bfa;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.stat-chart-title-dark {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.stat-rank-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.stat-rank-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.stat-rank-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.stat-rank-index {
+    color: #a78bfa;
+    font-weight: 700;
+    font-size: 1.1rem;
+    width: 28px;
+    flex-shrink: 0;
+}
+
+.stat-rank-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.stat-rank-title {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.98rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.stat-rank-author {
+    color: #e2e8f0;
+    font-size: 0.85rem;
+}
+
+.stat-rank-count {
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 4px 12px;
+    border-radius: 999px;
+    flex-shrink: 0;
+}
+
+.stat-empty {
+    color: #e2e8f0;
+    font-size: 0.9rem;
+}
+
+/* Loading / error state */
+.book-state-panel {
+    text-align: center;
+    padding: 40px 20px;
+    color: #64748b;
+    font-size: 1rem;
+}
+
+.book-state-panel.book-state-error {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .stat-title {
+        font-size: 2rem;
+    }
+
+    .stat-description {
+        max-width: 100%;
+    }
+}
