@@ -88,7 +88,7 @@ export const Book = () => {
         });
     }, [books, favoriteBooks, genreFilter, searchTerm]);
 
-    const featuredBook = books.find((book) => book.id === 4) || books[0] || null;
+    const featuredBook = books.find((book) => book.id === "1") || books[0] || null;
     const totalPages = Math.max(1, Math.ceil(filteredBooks.length / booksPerPage));
     const paginatedBooks = filteredBooks.slice((currentPage - 1) * booksPerPage, currentPage * booksPerPage);
 
