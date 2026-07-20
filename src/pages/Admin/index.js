@@ -22,11 +22,23 @@ export default function Admin() {
 
   // ✅ ADD
   const handleAdd = (data) => {
+    // Kiểm tra trùng tên (không phân biệt hoa thường và bỏ khoảng trắng đầu/cuối)
+    const isExist = books.some(
+      (book) =>
+        book.title.trim().toLowerCase() === data.title.trim().toLowerCase(),
+    );
+
+    if (isExist) {
+      alert("Book title already exists!");
+      return;
+    }
+
+    // Lấy id lớn nhất
     const numericIds = books
       .map((book) => Number(book.id))
       .filter((id) => !isNaN(id));
 
-    const maxId = Math.max(...numericIds, 0);
+    const maxId = numericIds.length > 0 ? Math.max(...numericIds) : 0;
 
     const newBook = {
       id: maxId + 1,

@@ -64,12 +64,30 @@ export default function BookForm({ onSubmit, editingBook, onCancel }) {
             onChange={handleChange}
           />
 
-          <input
+          <select
             name="genre"
-            placeholder="Genre"
             value={form.genre}
             onChange={handleChange}
-          />
+            required
+          >
+            <option value="">Genre</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Science Fiction">Science Fiction</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Mystery">Mystery</option>
+            <option value="History">History</option>
+            <option value="Historical Fiction">Historical Fiction</option>
+            <option value="Classic">Classic</option>
+            <option value="Memoir">Memoir</option>
+            <option value="Psychology">Psychology</option>
+            <option value="Self-Help">Self-Help</option>
+            <option value="Business">Business</option>
+            <option value="Finance">Finance</option>
+            <option value="Programming">Programming</option>
+            <option value="Science">Science</option>
+            <option value="Productivity">Productivity</option>
+            <option value="Post-Apocalyptic">Post-Apocalyptic</option>
+          </select>
 
           <input
             type="number"
