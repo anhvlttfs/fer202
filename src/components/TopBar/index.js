@@ -47,6 +47,9 @@ export const TopBar = () => {
                 Admin
               </Nav.Link>
             )}
+            <Nav.Link href="/stat" className="nav-btn me-2">
+              Stat
+            </Nav.Link>
           </Nav>
 
           {/* Action Button */}
