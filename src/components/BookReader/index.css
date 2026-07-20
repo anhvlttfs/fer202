@@ -1,7 +1,33 @@
 .book-reader {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.book-reader-shell {
+  width: min(100%, 980px);
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.book-reader-iframe {
+  width: min(100%, 920px);
+  min-height: 70vh;
+  height: min(78vh, 760px);
+  border: 0;
+  border-radius: 22px;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.12);
+  background: #ffffff;
+}
+
+.book-reader-loading {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  min-height: 280px;
+  color: #8b5e3c;
+  font-weight: 600;
 }
 
 .react-pdf__Page {

@@ -35,19 +35,23 @@ export const Reader = () => {
 
   return (
     <div className="reader-page">
-      <div className="reader-header">
-        <div className="book-info">
-          <h1>{book.title}</h1>
-          <p>{book.author}</p>
+      <div className="reader-shell">
+        <div className="reader-header">
+          <div className="book-info">
+            <h1>{book.title}</h1>
+            <p>{book.author}</p>
+          </div>
+
+          <div className="favorite-container">
+            <FavouriteButton bookId={book.id} />
+          </div>
         </div>
 
-        <div className="favorite-container">
-          <FavouriteButton bookId={book.id} />
+        <div className="reader-content">
+          <BookReader bookId={book.id} />
+          <CommentSection bookId={book.id} />
         </div>
       </div>
-
-      <BookReader bookId={book.id} />
-      <CommentSection bookId={book.id} />
     </div>
   );
 };
