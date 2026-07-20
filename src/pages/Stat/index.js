@@ -31,7 +31,7 @@ const GENRE_COLORS = [
     "#c17f59",
 ];
 
-export default function Stat() {
+export function Stat() {
     const [books, setBooks] = useState(null);
     const [users, setUsers] = useState(null);
     const [comments, setComments] = useState(null);
