@@ -41,7 +41,7 @@
     "react-redux": "^9.3.0",
     "react-router": "^8",
     "react-router-dom": "^7",
-    "recharts": "^2",
+    "recharts": "^3",
     "sass": "^1",
     "web-vitals": "^5",
     "webpack": "^5"
