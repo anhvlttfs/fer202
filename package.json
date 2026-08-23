@@ -43,7 +43,7 @@
     "react-router-dom": "^7",
     "recharts": "^2",
     "sass": "^1",
-    "web-vitals": "^5",
+    "web-vitals": "^6",
     "webpack": "^5"
   },
   "devDependencies": {
